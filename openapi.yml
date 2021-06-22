@@ -1,0 +1,29 @@
+openapi: 3.0.0
+servers:
+  - url: /
+info:
+  description: |
+     This is a sample Motorcycle Store based on the [OpenAPI 3.0 specification](https://swagger.io/docs/specification/about/).
+paths:
+  /makes:
+    get:
+      summary: Gets all makes
+      responses:
+        '200':
+          description: A list of makes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 'models.yml#/Make'
+                example:
+                  - id: 1
+                    name: BMW
+                  - id: 2
+                    name: Honda
+                  - id: 3
+                    name: Kawasaki
+components:
+  schemas:
+    $ref: 'models.yml'

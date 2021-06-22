@@ -1,0 +1,18 @@
+Make:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+Model:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    year:
+      type: integer
+    categoryName:
+      type: string
